@@ -10,7 +10,7 @@ dotenv.config();
 // import bodyParser from 'body-parser';
 const app = express();
 app.use(cors())
-app.use('/favicon.ico', express.static('🎬.svg'));
+app.use('/favicon.ico', express.static('logo.svg'));
 const server = http.createServer(app)
 
 mongoose
