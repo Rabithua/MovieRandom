@@ -13,7 +13,7 @@ rabithua@yuchangyedeMacBook-Air app % npm -v
 npm i
 npm start
 ```
-**Because the database connection needs to be kept confidential😎, you are unable to fully run the backend of this project locally. You can try modifying src/env.js and change all the apiUrl to https://api.givemeamovie.cn before attempting the steps again.**
+**Because the database connection needs to be kept confidential😎, you are unable to fully run the backend of this project locally. You can try modifying `src/env.js` and change all the `apiUrl` to `https://api.givemeamovie.cn` before attempting the steps again.**
 
 ## TREE
 
