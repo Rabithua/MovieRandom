@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { randomOneApi } from "../../api/main";
 import Typewriter from "typewriter-effect";
+import env from "../../env";
 
 function Home() {
   const [movie, setMovie] = useState({
@@ -88,6 +89,7 @@ function Home() {
       </a>
       <div className=" absolute bottom-0 flex sm:justify-start justify-center w-full text-xl pb-4 font-normal font-mono my-2 text-emerald-600 ">
         <a className=" duration-300 hover:text-emerald-800" href="https://github.com/Rabithua/MovieRandom" target="blank">GITHUB ⤴</a>｜
+        <a className=" duration-300 hover:text-emerald-800" href={`${env.apiUrl}/randomone`} target="blank">API ⤴</a>｜
         <div>已收录 9372 条数据</div>
       </div>
     </div>
