@@ -1,0 +1,1 @@
+pm2 start npm --watch --name GMAM --output /root/data/givemeamovie/logs.log --error /root/data/givemeamovie/errors.log -- start
