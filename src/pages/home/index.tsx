@@ -141,7 +141,7 @@ function Home() {
         >
           API ⤴
         </a>
-        ｜<div>已收录 9372 条</div>
+        ｜<div> 9372 MOVIE</div>
       </div>
     </div>
   );
