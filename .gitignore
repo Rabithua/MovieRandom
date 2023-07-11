@@ -12,8 +12,8 @@
 /build
 
 # backend
-/backend
-
+/backend/.env
+/backend/node_modules
 # misc
 .DS_Store
 .env.local
