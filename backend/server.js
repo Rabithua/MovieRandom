@@ -13,7 +13,7 @@ app.use(cors())
 app.use('/favicon.ico', express.static('logo.svg'));
 const server = http.createServer(app)
 
-mongoose
+mongoose.set('strictQuery', true)
     .connect(process.env.DBURI, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
