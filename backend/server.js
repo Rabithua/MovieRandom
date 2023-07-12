@@ -27,12 +27,14 @@ mongoose
     });
 
 app.get("/", (req, res) => {
-    console.log(`${date.format(new Date(), "YYYY-MM-DD HH:mm")} ${req.method} ${req.path}`);
+    const ipAddress = req.headers['x-forwarded-for'] || req.headers['x-real-ip'] || req.connection.remoteAddress;
+    console.log(`${date.format(new Date(), "YYYY-MM-DD HH:mm")} ${ipAddress} ${req.method} ${req.path}`);
     res.send("🎬");
 });
 
 app.get("/randomone", (req, res) => {
-    console.log(`${date.format(new Date(), "YYYY-MM-DD HH:mm")} ${req.method} ${req.path}`);
+    const ipAddress = req.headers['x-forwarded-for'] || req.headers['x-real-ip'] || req.connection.remoteAddress;
+    console.log(`${date.format(new Date(), "YYYY-MM-DD HH:mm")} ${ipAddress} ${req.method} ${req.path}`);
     Movie.aggregate([{ $sample: { size: 1 } }])
         .then(data => {
             console.log('Random data:', data);
@@ -45,7 +47,8 @@ app.get("/randomone", (req, res) => {
 });
 
 app.all("*", function (req, res, next) {
-    console.log(`${date.format(new Date(), "YYYY-MM-DD HH:mm")} ${req.method} ${req.path}`);
+    const ipAddress = req.headers['x-forwarded-for'] || req.headers['x-real-ip'] || req.connection.remoteAddress;
+    console.log(`${date.format(new Date(), "YYYY-MM-DD HH:mm")} ${ipAddress} ${req.method} ${req.path}`);
     res.send({
         code: 404,
         codeDesc: "PageNotFound",
