@@ -81,6 +81,7 @@ function Home() {
             href={movie.Link}
             target="blank"
             className=" sm:text-4xl text-3xl my-2 duration-300 text-emerald-600 hover:text-emerald-800"
+            data-umami-event="DOUBAN⤴"
           >
             <Typewriter
               options={{
@@ -95,6 +96,7 @@ function Home() {
           <a
             href='/'
             className=" sm:text-4xl text-3xl my-2 duration-300 text-emerald-600 hover:text-emerald-800"
+            data-umami-event="ONE MORE⤴"
           >
             <Typewriter
               options={{
@@ -130,6 +132,7 @@ function Home() {
           className=" duration-300 hover:text-emerald-800"
           href="https://github.com/Rabithua/MovieRandom"
           target="blank"
+          data-umami-event="GITHUB⤴"
         >
           GITHUB ⤴
         </a>
@@ -138,6 +141,7 @@ function Home() {
           className=" duration-300 hover:text-emerald-800"
           href={`${env.apiUrl}/randomone`}
           target="blank"
+          data-umami-event="API⤴"
         >
           API ⤴
         </a>
